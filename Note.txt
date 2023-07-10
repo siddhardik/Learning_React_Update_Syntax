@@ -1,0 +1,32 @@
+ReactJs.org 
+
+React  originally created by Jordan Walke
+
+Initial Version 2013
+
+Currently maintained by Meta 
+
+Latest Version React is v18 
+
+01 .++> Why React => React is Composable !  Code Reusability !
+Compoent Once Use it many Times ! React helps creating Single page Application Contain just one html page !
+
+
+02. ++> SPA Vs MPA 
+
+  => Multi -page Application is traditional implementation of web application which reloads the whole page when user interacts with the app. Every time many post request for carry fulll html file .
+
+  => SPA loads a single document {HTML} and update the parts of the document using javascript APIs (AJAX).Single-page applications dynamically updates the contents of a page based on user interaction without having to reload the page. Since this dynamic content is difficult to crawl, SPA’s are less suitable for SEO
+
+Amazon uses MPA beacuse its SEO .
+
+++> React is Declarative !!
+
+
+
+
+
+
+
+
+
