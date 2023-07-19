@@ -23,8 +23,18 @@ console.log("Javascript Element" , heading);
 // ReactDOM.createRoot(document.getElementById("root")).render(reactHeading);
 
 
-/* React With JSX */
-const jsxHeading = (<h1> Hello React !</h1>);
+/* React With JSX  and empty React Fragment <> </>*/
+// const jsxHeading = (<>
+// <h1 className="head"> Hello React !</h1>
+// <p> This paragraph is used here </p>
+// </>);
+
+/* React With JSX and Full React Fragment </> */
+const jsxHeading = (<React.Fragment>
+<h1 className="head"> Hello React !</h1>
+<p> This paragraph is used here </p>
+</React.Fragment>);
+
 ReactDOM.createRoot(document.getElementById("root")).render(jsxHeading);
 
 
