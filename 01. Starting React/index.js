@@ -35,8 +35,21 @@ const jsxHeading = (<React.Fragment>
 <p> This paragraph is used here </p>
 </React.Fragment>);
 
-ReactDOM.createRoot(document.getElementById("root")).render(jsxHeading);
 
+//Looks like function but still Naming Convention should be First letter Capital 
+function App(){
+    return (
+        <>
+            <h1 className="head"> Hello React !</h1>
+            <p> This paragraph is used here </p>
+        </>
+    )
+}
+
+// ReactDOM.createRoot(document.getElementById("root")).render(App());
+ReactDOM.createRoot(document.getElementById("root")).render(<App/> );
+
+// App()  Function    <App/> Component   but same result 
 
 
  
