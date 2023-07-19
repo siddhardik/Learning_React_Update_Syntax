@@ -22,6 +22,19 @@ Amazon uses MPA beacuse its SEO .
 
 ++> React is Declarative !!
 
+Tell , what you want to do ? not how!
+React is declarative because it describes the desired outcome, not the specific steps to achieve it. This allows for more efficient updates to the DOM, eliminates the need for manual DOM manipulation, and makes it easier to understand the code. 
+
+
+Being ReactDOM is a virtual DOM . It is very Faster that makes react more fast.
+
+
+ReactDOM is a package that provides DOM-specific methods that can be used at the top level of a web app to enable an efficient way of managing DOM elements of the web page.
+
+When we try to update the DOM in React, the entire Virtual DOM is updated and compared to what it looked like before the update in a process called diffing. These changes are then updated on the Real DOM.
+
+Babel is a javascript Compiler.
+
 
 
 
