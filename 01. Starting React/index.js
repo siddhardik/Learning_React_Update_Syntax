@@ -37,17 +37,43 @@ const jsxHeading = (<React.Fragment>
 
 
 //Looks like function but still Naming Convention should be First letter Capital 
+/*
+
 function App(){
     return (
         <>
             <h1 className="head"> Hello React !</h1>
             <p> This paragraph is used here </p>
-        </>
-    )
+            </>
+            )
+        }
+        
+        )
+        */
+
+
+//  Using Arrow Function 
+
+const App=()=>{
+    return (
+        <>
+            <h1 className="head"> Hello React !</h1>
+            <p> This paragraph is used here </p>
+            <Name/>
+            </>
+            );
 }
 
+const Name=()=>{
+    return (
+        <>
+            <h1 className="head"> Hello React ! Name</h1>
+            <p> This paragraph is used here in Name </p>
+            </>
+            );
+}
 // ReactDOM.createRoot(document.getElementById("root")).render(App());
-ReactDOM.createRoot(document.getElementById("root")).render(<App/> );
+ReactDOM.createRoot(document.getElementById("root")).render(<><App/> <Name/></> );
 
 // App()  Function    <App/> Component   but same result 
 
