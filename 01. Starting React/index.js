@@ -15,11 +15,17 @@ console.log("Javascript Element" , heading);
 */
 
 
-/* React */
+/* React with Javascript */
 
-const reactHeading = React.createElement("h1" , {className:"head"},"Hello React");
-console.log("React Element" , reactHeading);
-ReactDOM.createRoot(document.getElementById("root")).render(reactHeading);
+// const reactHeading = React.createElement("h1" , {className:"head"},"Hello React");
+// console.log("React Element" , reactHeading);
+
+// ReactDOM.createRoot(document.getElementById("root")).render(reactHeading);
+
+
+/* React With JSX */
+const jsxHeading = (<h1> Hello React !</h1>);
+ReactDOM.createRoot(document.getElementById("root")).render(jsxHeading);
 
 
 

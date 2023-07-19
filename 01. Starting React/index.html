@@ -5,11 +5,15 @@
         <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
    
+<!-- For Babel   => to convert jsx into javascript -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
     <body>
         <div id="root"></div>
-        <script src ="index.js"></script>
+        <script src ="index.js" type="text/babel">
+        </script>
+        <!-- We tell babel that code under index.js need to compilation  -->
     </body>
 
 </html>

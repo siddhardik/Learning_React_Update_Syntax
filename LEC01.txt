@@ -35,6 +35,10 @@ When we try to update the DOM in React, the entire Virtual DOM is updated and co
 
 Babel is a javascript Compiler.
 
+JSX => Javascript XML {javascript With HTML}[Syntactic Sugar]
+
+browser only understands html css js , if we write somrthing other we have to convert it into these area.
+
 
 
 
