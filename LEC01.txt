@@ -40,7 +40,10 @@ JSX => Javascript XML {javascript With HTML}[Syntactic Sugar]
 browser only understands html css js , if we write somrthing other we have to convert it into these area.
 
 MCQ - createRoot in React Solution 
+    - React DOM Tree
 
+
+When we make some changes in a node in the DOM tree using JavaScript, then all the children of that node, including the node itself, get re-rendered. When we make some changes in a node in the DOM tree using React, only that particular node gets re-rendered.
 
 
 

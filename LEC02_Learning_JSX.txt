@@ -1,0 +1,6 @@
+JSX is a Syntax Extension to JavaScript .
+
+Advantages Of JSX =>
+1. It helps to couple rendering logic with the UI logic
+2. It separates concerns instead of separating      technologies.
+3. It helps React to show more useful error and warning messages

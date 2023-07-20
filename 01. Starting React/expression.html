@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Lets Learn JSX </title>
+         <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+
+    <body>
+        <div id="root">
+
+        </div>
+        <script type="text/babel">
+            function App(){
+                var country="India";
+                var name ="Vaku";
+                var age=5;
+                let valueOfNull=null;
+                let valueOfUndefined=undefined;
+                let a=false;
+                let b=true;
+                // if we render null value it  will show nothing ,not taken space 
+                return (
+                    <>
+                   <h1>Lets Learn JSX from Our {country} </h1>
+                   <p> {name}'s age is {age} </p>
+                   <p> The Value of null is:{valueOfNull}Space Taken?[NO]</p>
+                   <p> The Value of undefined is:{valueOfUndefined}Space Taken?[NO]</p>
+                   <p> True:{a}False:{b}Space Taken?[NO]</p>
+                   </>
+                );
+            }
+            ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+        </script>
+    </body>
+</html>
