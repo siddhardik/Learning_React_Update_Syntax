@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Lets Learn JSX </title>
+         <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+
+    <body>
+        <div id="root">
+
+        </div>
+        <script type="text/babel">
+            
+            function App(){
+                const arr =[2,4,6,78,23,46,79];
+
+                const obj={
+                    name:"Siddhi",
+                    village:"Amda",
+                    Age:21
+                }
+
+                // obj will not render directly 
+
+                const car=["bmw", "Honda", "Maruti", "Hero", "MERCIDIES"];
+                
+                return (
+                    <>
+                    <h1>Arrays And Objects in Javascript</h1>
+                    {arr.map((ele)=><h3>{ele}</h3>)}
+                    {arr.map((ele)=><h3>{ele*3}</h3>)}
+
+                    <h4>Name : {obj.name} Village : {obj.village} Age : {obj.Age}</h4>
+                     
+                    <h1>Assigning Unipue Key</h1>
+                    
+                    <ul type="square">
+                        {car.map((ele,index)=><li key={index}>{ele}</li>)}
+                        </ul>
+                   
+                   </>
+
+                
+                );
+            }
+            ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+        </script>
+    </body>
+</html>

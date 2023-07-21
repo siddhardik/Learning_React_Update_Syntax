@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Lets Learn JSX </title>
+         <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+
+    <body>
+        <div id="root">
+
+        </div>
+        <script type="text/babel">
+            
+            function App(){
+               
+
+                // obj will not render directly
+                let students=[
+                    {
+                        name: "Shilpa",
+                        age:20,
+                        marks:431
+                    },
+                    {
+                        name:"Sarada",
+                        age:5,
+                        marks:352
+                    },
+                    {
+                        name:"Soumi",
+                        age:17,
+                        marks:345
+                    },
+                    {
+                        name:"Sathi",
+                        age:13,
+                        marks:327
+                    },
+                    {
+                        name:"Tusu",
+                        age:11,
+                        marks:397
+                    }
+                
+
+                ] 
+
+                
+                
+                return (
+                    <>
+                    <h1>Student Data Table </h1>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Student's Name</th>
+                                <th>Age</th>
+                                <th>Mark</th>
+                            </tr>
+
+
+                        </thead>
+
+                        <tbody>
+                            {
+                                students.map((student,index)=>
+                                <tr key={index}>
+                                    <td>{student.name}</td>
+                                    <td>{student.age}</td>
+                                    <td>{student.marks}</td>
+                                    </tr>
+                                )
+                            }
+
+                        </tbody>
+                        
+                        
+                    </table>
+                   </>
+
+                
+                );
+            }
+            ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+        </script>
+    </body>
+</html>
+
+
+
+itemsSold.reduce(
+    (acc,item)=>
+    (acc+ (item.price*item.qty)),0
+)
