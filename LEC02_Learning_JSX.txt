@@ -22,3 +22,21 @@ The map method receives the current item in the array iteration as the argument 
 https://upmostly.com/tutorials/react-filter-filtering-arrays-in-react-with-examples
 
 Keys are used in React to identify which items have been updated or deleted in a list. It is not a required property but is necessary to ensure good optimization.
+
+
+0, null , undefined , "" , false[boolean]  are false .
+
+&& operator returns first falsy and last truthy value.
+
+true && true   true
+
+false && true   false
+
+"hello" && true  true
+
+true && "hello"    "hello"
+
+true && 1 && 0 && "hello" &&  false      0
+
+
+For || operator First truthy and last falsy 
