@@ -9,7 +9,7 @@ Currently maintained by Meta
 Latest Version React is v18 
 
 01 .++> Why React => React is Composable !  Code Reusability !
-Compoent Once Use it many Times ! React helps creating Single page Application Contain just one html page !
+Component Once Use it many Times ! React helps creating Single page Application Contain just one html page !
 
 
 02. ++> SPA Vs MPA 

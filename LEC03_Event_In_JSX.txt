@@ -1,0 +1,3 @@
+onclick becomes onClick in JSX.
+
+We are calling the handleAdd function directly inside of the button element. This will call the handleAdd function immediately when the code is executed (Page loads) and will not handle any further click events on the button element.

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <title>React App</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+    let texInBtn ="Hide Element Below";
+    let pText="";
+      const setShow = () => {
+        if(texInBtn=="Show Element Below"){
+
+          texInBtn ="Hide Element Below";
+       
+          pText="Hello ninjas, I am here.";
+        }
+
+        else{
+          texInBtn ="Show Element Below";
+          pText="Hello ninjas, I am here.";
+          pText="";
+        }
+      
+      rootElement.render(<App />);
+      };
+
+      const App = () => (
+        <>
+          <h1>Coding Ninjas</h1>
+          <button onClick={setShow}>{texInBtn}</button>
+
+          <p> {pText}</p>    
+        </>
+      );
+
+      const rootElement = ReactDOM.createRoot(document.getElementById("root"));
+      rootElement.render(<App />);
+    </script>
+  </body>
+</html>
