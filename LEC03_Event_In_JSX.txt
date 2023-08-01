@@ -21,10 +21,14 @@ We use inline arrow functions to pass parameters to event handlers.
 
 We are calling the handleGreet function directly inside of the button element. Inside of handleGreet we are rendering the app again. Thus the handleGreet is called repeatedly and logs “Hey there.” to the console each time.
 
-<br> Open </br> close   But Actually <br/>
+<br> Open </br> close   But Actually <br/> When Self Closing tag
 What are the parameter values of the map method?
 
 The first parameter is the current item in the iteration cycle and the second is the index of that item
 
 A “key” is a special string attribute you need to include when creating lists of elements. It helps React identify which elements have changed in between the renders and only updates those elements in the Real DOM.
+
+Synthetic Events. React uses a synthetic events system to ensure that React apps and interfaces are consistent and fast. 
+
+Synthetic events are a wrapper around the event object of the Real DOM. We can stop the default behavior of a Synthetic event by calling preventDefault on the event object as returning false will not work.
 
