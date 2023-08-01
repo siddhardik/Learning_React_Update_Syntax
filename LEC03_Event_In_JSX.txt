@@ -1,3 +1,30 @@
 onclick becomes onClick in JSX.
 
 We are calling the handleAdd function directly inside of the button element. This will call the handleAdd function immediately when the code is executed (Page loads) and will not handle any further click events on the button element.
+
+
+instead of onclick we have to write onClick in JSX 
+
+in JSX don't call the function just pass the function
+<button onClick={clickOne()}>1</button> 
+
+as soon as app rendered, this function automatically called without clicked on 1 button 
+<button onClick={clickOne}>1</button>  Use this syntax 
+
+ We are calling the handleAdd function directly inside of the button element. This will call the handleAdd function immediately when the code is executed (Page loads) and will not handle any further click events on the button element
+
+Virtual DOM works by comparing changes in the Virtual DOM to the Real DOM and updates the only changed objects in the Real DOM which causes the screen to change.
+
+How to pass parameters to event handlers in React?
+onClick={(e) => handleClick(e, id)}
+We use inline arrow functions to pass parameters to event handlers.
+
+We are calling the handleGreet function directly inside of the button element. Inside of handleGreet we are rendering the app again. Thus the handleGreet is called repeatedly and logs “Hey there.” to the console each time.
+
+<br> Open </br> close   But Actually <br/>
+What are the parameter values of the map method?
+
+The first parameter is the current item in the iteration cycle and the second is the index of that item
+
+A “key” is a special string attribute you need to include when creating lists of elements. It helps React identify which elements have changed in between the renders and only updates those elements in the Real DOM.
+

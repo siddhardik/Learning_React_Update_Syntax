@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    
     <div id="root" style="text-align:center">
 
     </div>
@@ -65,6 +66,33 @@
             }
         }
 
+    
+
+        const Result=()=>(
+             <div>
+                
+                {ballWiseRes.map((res,index)=>(
+                    <>
+                    {index%6==0?<br/> :null}
+                   
+                    <span key={index}>
+                        {res===0?
+                            <strong style={{fontSize:"40px"}}>.</strong>:
+                            res==="w"?<strong style={{color: "red"}} >W</strong>:res
+                        }
+                    </span> &nbsp; &nbsp; &nbsp;
+                    </>
+                    // <strong style="color:{res === w?red:black}" >res</strong>
+                   
+
+                )
+                )}
+               
+
+             </div>
+        )
+        
+
         const ScoreButtons= () =>{
 
             // no need { return } but still use for practice 
@@ -100,6 +128,7 @@
                     <h1>SCORE KEEPER</h1>
                     <h2>SCORE : {score} / {wicket}</h2>
                     <ScoreButtons />
+                    <Result/>
 
                 </>
 
