@@ -1,0 +1,42 @@
+JSX is a Syntax Extension to JavaScript .
+
+Advantages Of JSX =>
+1. It helps to couple rendering logic with the UI logic
+2. It separates concerns instead of separating      technologies.
+3. It helps React to show more useful error and warning messages
+
+We need to call the function with parameter inside the JSX using { }.
+
+JSX can only have a single expression to render inside of the UI. However, We can create a parent element or use React fragments to group the UI elements into a single expression.
+
+The code does not render anything because of missing parenthesis around the JSX expression. It resolves to a null value because of the implicit return.
+
+JSX does not work with only open tag we have to use closed </> also 
+
+Loops do not return any values. So they are not valid expressions and cannot be used to render JSX. Objects are not valid as a React child. We cannot directly render them inside JSX.
+
+Loops are just a series of statements that executes for a specified number of repetitions or until specified conditions are met. They do not return any value.
+
+The map method receives the current item in the array iteration as the argument to the callback function.
+
+https://upmostly.com/tutorials/react-filter-filtering-arrays-in-react-with-examples
+
+Keys are used in React to identify which items have been updated or deleted in a list. It is not a required property but is necessary to ensure good optimization.
+
+
+0, null , undefined , "" , false[boolean]  are false .
+
+&& operator returns first falsy and last truthy value.
+
+true && true   true
+
+false && true   false
+
+"hello" && true  true
+
+true && "hello"    "hello"
+
+true && 1 && 0 && "hello" &&  false      0
+
+
+For || operator First truthy and last falsy 
