@@ -36,3 +36,9 @@ React supports a special attribute (ref ) that you can attach to any component w
 
 The ref attribute can be used to set a ref to an element and ref.current returns the HTML node associated with that ref.
 
+Event.type returns a string with the name of the event on the DOM element, which in this case is the submit event.  for onSubmit 
+
+Events in React are named using camelCase rather than lowercase
+With JSX we have to pass a function rather than a string
+We cannot return false to prevent default behavior of the event
+

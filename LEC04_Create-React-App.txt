@@ -1,0 +1,42 @@
+CDN does not work without an internet connection
+CDN can fail if the servers running that service fails to operate
+CDN can cause support and infrastructure issues
+
+Script are loaded synchronously from top to bottom
+Scripts at the top do not have access to other scripts below them
+
+The entry property in the webpack configuration file can be set to a string or an array or strings which are paths to the files in your application. Webpack will put these files at the top of its internal dependency graph.
+
+Loaders allows webpack to process various files and convert them into valid modules that can be consumed by the application and added to the dependency graph.
+
+To install globally in System 
+npm install -g create-react-app
+
+S:\A MasterClass Series Of Web Dev>npm install -g create-react-app
+
+Try  on windows PowerShell 
+ExecutionPolicy RemoteSigned
+
+
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+
+npx create-react-app <appname>  vs
+create-react-app <appname>
+
+NPM is a package manager used to install, delete, and update Javascript packages on your machine. NPX is a package executer, and it is used to execute javascript packages directly, without installing them
+
+create-react-app <project_name>
+npx create-react-app <project_name>
+
+It records all the dependencies, scripts and metadata about the project
+
+Named exports use curly braces while default export does not
+Naming of import is completely independent in default export but not in named exports
+You can have multiple named exports per module but only one default export.
+
+We cannot use export statements before initialising declarations in JavaScript.
+
+
+
