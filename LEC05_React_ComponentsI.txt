@@ -1,1 +1,25 @@
 Components  => Class Based  // Function Based 
+
+Render onl;y on available in class Component 
+
+In case of export default, a single App component is getting exported, hence there is no need to extract it while importing it. But since there can be multiple exports in the case of using named export, hence we need to use the destructure concept using {}.
+
+We are importing a react object. To get the component class, we need to restructure it like this → 
+
+    import {Component} from “react”;
+
+Flaticon the Icon centre
+
+States is Built -in -Object , single source of truth 
+In general you can decide to use mutability or immutability, but React requires state to be immutable. 
+
+We can use handler functions without binding them to the component but they will lose reference to the current component instance when triggered once. The ES6 concise method syntax does not bind the handler to the component. This can be done using arrow functions.
+
+= [ Second use of state]
+setState()  to rerender the component 
+
+this.setState(
+{
+stars:this.state.stars + 0.5;
+
+})
