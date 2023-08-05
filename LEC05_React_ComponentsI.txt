@@ -23,3 +23,33 @@ this.setState(
 stars:this.state.stars + 0.5;
 
 })
+
+
+
+More  About setState 
+
+//Form1 
+ this.setState({
+            star:this.state.star + 0.5
+        })
+
+
+If many setState function  is called then all above will be not executed only the last one will be executed and react does it .
+
+This is called batching.
+
+
+
+Form2// 
+  this.setState((prevState) => {
+            return {
+                star: prevState + 0.5
+            }
+        })
+
+but for the second form if this.setState is called 3 times it will be increased by 1.5.
+
+
+React groups multiple state updates into a single rerender for better performance. So only the last call to setState is executed after the button is clicked hence with an initial value of count as 1 will become 5 after the button is clicked. For from 1
+
+

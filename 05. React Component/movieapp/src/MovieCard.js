@@ -12,18 +12,24 @@ class MovieCard extends React.Component {
                 'https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg',
             rating: '8.0',
             price: 199,
-            star: 0
+            star: 0,
+            fav:true
         }
 
         //Binding the event handler in the constructor if event handler is not an arrow function
         // this.addStars = this.addStars.bind(this)
+        // this.decStars = this.decStars.bind(this);
     }
 
     //Creating an arrow function for addStars which automatically binds to the current instance
     addStars = () => {
         //Form 1 of setState() - increasing the star count by 0.5
+
+        if(this.state.star + 0.5>5){
+            return;
+        }
         this.setState({
-            star: this.state.star + 0.5
+            star:this.state.star + 0.5
         })
 
         //Form 2 of setState() - increasing the star count by 0.5
@@ -36,9 +42,25 @@ class MovieCard extends React.Component {
          */
     }
 
+    //Creating an arrow function for addStars which automatically binds to the current instance
+    decStars = () => {
+        //Form 1 of setState() - increasing the star count by 0.5
+        this.setState({
+            star: (this.state.star - 0.5)<0?0:this.state.star - 0.5
+        })
+
+      
+    }
+
+    handleFav=()=>{
+           this.setState({
+            fav:!(this.state.fav)
+           })
+    }
+
     render() {
         //Destructing the state object in render function
-        const { title, plot, poster, price, rating, star } = this.state;
+        const { title, plot, poster, price, rating, star,fav } = this.state;
 
         return (
             <div className="main">
@@ -68,6 +90,7 @@ class MovieCard extends React.Component {
                                 <img className="str-btn"
                                     alt="Decrease"
                                     src="https://cdn-icons-png.flaticon.com/128/2801/2801932.png"
+                                    onClick={this.decStars}
                                 />
                                 <img className="stars"
                                     alt="stars"
@@ -83,7 +106,9 @@ class MovieCard extends React.Component {
                             </div>
 
                             {/**Favourite and add to cart buttons */}
-                            <button className="favourite-btn">Favourite</button>
+                            <button className={fav?"unfavourite-btn":"Favourite"} 
+                            onClick={this.handleFav}>{fav?"Un-Favourite":"Favourite"}</button>
+
                             <button className="cart-btn">Add to Cart</button>
 
                         </div>
