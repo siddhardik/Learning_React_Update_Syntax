@@ -52,4 +52,22 @@ but for the second form if this.setState is called 3 times it will be increased 
 
 React groups multiple state updates into a single rerender for better performance. So only the last call to setState is executed after the button is clicked hence with an initial value of count as 1 will become 5 after the button is clicked. For from 1
 
+// Props Basics 
+
+ <Student name ="Siddhartha" />  
+
+<h1>Hello , {this.props.name}</h1>
+
+Props are always passed from the parent to the child component. A component can have any number of attributes as props.
+
+// Default Props 
+
+Passing Data through Props  Important MCQ
+
+Props can be any JavaScript value that is passed from the parent to the child component. We can access props anywhere inside a class component.
+
+
+
+
+
 
