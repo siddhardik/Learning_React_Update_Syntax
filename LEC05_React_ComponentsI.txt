@@ -67,6 +67,10 @@ Passing Data through Props  Important MCQ
 Props can be any JavaScript value that is passed from the parent to the child component. We can access props anywhere inside a class component.
 
 
+when When key And  value has same name we can just use either key or value.
+
+Props are read-only. A component cannot change the value of its props. They can only be used for rendering information on the screen.
+
 
 
 
