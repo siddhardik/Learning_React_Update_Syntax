@@ -4,8 +4,8 @@ class MovieCard extends React.Component{
 
     render(){
         
-        const {movies, onIncStars, onClickFav, onClickAddtocart, onDecStars} =  this.props
-        const {title, plot, poster, price, rating,stars,fav,isInCart} =  this.props.movies;
+        const {currMovie , onIncStars, onClickFav, onClickAddtocart, onDecStars} =  this.props
+        const {title, plot, poster, price, rating,stars,fav,isInCart} =  this.props.currMovie ;
         
           
         return(
@@ -34,7 +34,7 @@ class MovieCard extends React.Component{
                             <img className="str-btn" 
                                 alt="Decrease" 
                                 src="https://cdn-icons-png.flaticon.com/128/2801/2801932.png" 
-                                onClick={() => onDecStars(movies)}
+                                onClick={() => onDecStars(currMovie )}
                             />
                             <img className="stars" 
                                     alt="stars" 
@@ -44,14 +44,14 @@ class MovieCard extends React.Component{
                                 alt="increase" 
                                 src="https://cdn-icons-png.flaticon.com/128/2997/2997933.png" 
                                 // No binding required as addStars() is an arrow function
-                                onClick={() => onIncStars(movies)}
+                                onClick={() => onIncStars(currMovie )}
                             />
                             <span className="starCount">{stars}</span>
                         </div>
 
                         {/**conditional rendering on Favourite button */}
                         <button className={fav?"unfavourite-btn":"favourite-btn"}  
-                                onClick={() => onClickFav(movies)}> 
+                                onClick={() => onClickFav(currMovie )}> 
                                     
                                     {fav ? "Un-favourite":"Favourite"}
 
@@ -59,7 +59,7 @@ class MovieCard extends React.Component{
                             
                         {/**Conditional Rendering on Add to Cart Button */}
                         <button className={isInCart?"unfavourite-btn":"cart-btn"}  
-                                onClick={() => onClickAddtocart(movies)}>
+                                onClick={() => onClickAddtocart(currMovie )}>
                                     
                                         {isInCart ? "Remove from Cart":"Add to Cart"}
 

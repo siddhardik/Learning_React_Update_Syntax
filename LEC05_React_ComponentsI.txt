@@ -72,6 +72,9 @@ when When key And  value has same name we can just use either key or value.
 Props are read-only. A component cannot change the value of its props. They can only be used for rendering information on the screen.
 
 
+Props get passed into a component, whereas the state is managed within a component.
+The props object is immutable, while the state is mutable and used to add dynamic information to the component.
+
 
 
 
