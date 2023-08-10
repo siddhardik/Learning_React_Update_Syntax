@@ -8,27 +8,16 @@ Instead of creating .css file we have to create
 
 headingOne.module.css
 
-use not hiphen in class name 
-
-//Navbar.js
-
-import styles from "./Navbar.module.css";
-const Navbar = () => {
-return (
-<div className={styles.navbar}>
-<span>Title of Navbar</span>
-<span>
-Cart Icon<sup>count</sup>
-</span>
-</div>
-);
-};
-export default Navbar;
 
 
-//Navbar.module.css
+The state is lifted to share data between the child components. This makes the parent component the “source of truth”. It does not automatically give the parent component access to any data inside the child component.
 
-.navbar {
-display: flex;
-justify-content: space-between;
-}
+They can be used to scope the styles of components locally.
+They are used to avoid conflicts in styles and to simplify the naming of selectors.
+They implicitly export an object using default exports.
+
+By using a styled component with dynamic props.
+By adding dynamic classes to the element.
+By using inline styles with dynamic values.
+
+We can pass an inline arrow function to a styled component's template literal to adapt it based on its props.
