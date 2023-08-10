@@ -1,0 +1,34 @@
+style by default golbal scope
+
+.css file has global scope
+
+styled-components has local and module also has local scope
+
+Instead of creating .css file we have to create 
+
+headingOne.module.css
+
+use not hiphen in class name 
+
+//Navbar.js
+
+import styles from "./Navbar.module.css";
+const Navbar = () => {
+return (
+<div className={styles.navbar}>
+<span>Title of Navbar</span>
+<span>
+Cart Icon<sup>count</sup>
+</span>
+</div>
+);
+};
+export default Navbar;
+
+
+//Navbar.module.css
+
+.navbar {
+display: flex;
+justify-content: space-between;
+}
