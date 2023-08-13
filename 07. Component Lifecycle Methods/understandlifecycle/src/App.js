@@ -1,15 +1,31 @@
-import React from 'react';
-import ComponentA from './ComponentA';
+import React from "react";
+import TimerOne from "./Components/Timer/TimerOne.js";
 
 class App extends React.Component {
-  
-render(){
-    return  (
-      // <h1>Hello</h1>
-      <ComponentA />
-    )
-}
+  constructor() {
+    super();
 
+    this.state = {
+      mount: true
+    }
+  }
+
+  handleMount = () => {
+    this.setState((prevState) => {
+      return {
+        mount: !prevState.mount
+      }
+    })
+  };
+
+  render() {
+    return (
+      <>
+        <button onClick ={this.handleMount}>{this.state.mount ? "Un-Mount": "Mount"}</button>
+        {this.state.mount? <TimerOne />: null}
+      </>
+    );
+  }
 }
 
 export default App;

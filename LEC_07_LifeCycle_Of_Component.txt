@@ -22,3 +22,11 @@ ComponentB.js:16  B. getDerivedStateFromProps has been invoked => Second
 ComponentB.js:25 B. This render has been invoked => Third 
 ComponentB.js:21 B. componentDidMount has been invoked => Last
 ComponentA.js:22 A. componentDidMount has been invoked => Last
+
+
+As the component is rerendered every time you type, the componentDidUpdate() method gets called after each render. Hence, it is the best place to cause a side effect and send a request to save the text.
+
+Solution Description
+componentWillUnmount() is a recommended method to unsubscribe events or cancel previous requests. In this case, the previous request isn’t required to be sent as it may cause unnecessary API calls and increased network costs. Therefore, we are canceling the request.
+
+The Feed component will initially have an empty array inside the state. So it will render “0”. After five seconds, the state will be updated to an array of length 2. This will trigger the shouldComponentUpdate lifecycle method that will prevent the component from updating if the array length is not greater than or equal to 3. So the component will not re-render.
