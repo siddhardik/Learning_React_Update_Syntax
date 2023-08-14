@@ -30,3 +30,9 @@ Solution Description
 componentWillUnmount() is a recommended method to unsubscribe events or cancel previous requests. In this case, the previous request isn’t required to be sent as it may cause unnecessary API calls and increased network costs. Therefore, we are canceling the request.
 
 The Feed component will initially have an empty array inside the state. So it will render “0”. After five seconds, the state will be updated to an array of length 2. This will trigger the shouldComponentUpdate lifecycle method that will prevent the component from updating if the array length is not greater than or equal to 3. So the component will not re-render.
+
+The value returned by the getSnapshotBeforeUpdate() method is passed to the componentDidUpdate() method as a parameter. When the component updates, the value of snapShot and previous count remains the same i.e, one. The current value of the count becomes four.
+
+
+
+
