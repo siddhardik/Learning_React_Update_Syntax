@@ -33,6 +33,14 @@ The Feed component will initially have an empty array inside the state. So it wi
 
 The value returned by the getSnapshotBeforeUpdate() method is passed to the componentDidUpdate() method as a parameter. When the component updates, the value of snapShot and previous count remains the same i.e, one. The current value of the count becomes four.
 
+The loader is mounted as soon as the request is sent to the API. When the data is received, the loader is unmounted and removed from the DOM. So, it goes through the mounting and un-mounting phases only.
+The component goes through the updating phase when the data is received from API and set inside the state. So we can implement the effects inside lifecycle methods executed during this phase.
+
+Solution Description
+When shouldComponentUpdate returns false, the component will not be rerendered. Therefore the render and componentDidUpdate lifecycle methods are not executed
+
+Error Boundary cannot be used to handle errors from event handlers and itself. A fallback UI is not provided by default and can be implemented by using Error Boundary.
+
 
 
 
