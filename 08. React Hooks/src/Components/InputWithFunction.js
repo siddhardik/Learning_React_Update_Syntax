@@ -5,19 +5,18 @@ export default function Input(){
     const [name,setName] = useState("Harry");
     const [lastName,setLastname] = useState("Potter");
     const a = 0;
-   
-
-    // Use as componentDidMount And componentDidUpdate
-
-    /* useEffect(()=>{
-        document.title = name+" "+lastName;
-     });
-     */
 
     useEffect(()=>{
         document.title = name+" "+lastName;
-    },[name,lastName]); 
-    // For [] use as componentDidMount Other use as componentDidUpdate
+    },[name, lastName]);
+
+    useEffect(()=> {
+        const timer = setInterval(() => {
+            console.log("Window-width: ",window.innerWidth);
+          }, 2000);
+          return(()=>{clearInterval(timer)})
+        }
+   );
    
     return(
         <>
