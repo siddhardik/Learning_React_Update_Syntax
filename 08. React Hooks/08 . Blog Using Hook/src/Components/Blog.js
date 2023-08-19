@@ -111,10 +111,10 @@ export default function Blog(){
 
 //Row component to introduce a new row section in the form
 function Row(props){
-    const{label} = props;
+    const {label} = props;
     return(
         <>
-        <label>{label}<br/></label>
+        <label >{label}<br/></label>
         {props.children}
         <hr />
         </>
