@@ -1,7 +1,7 @@
 //Blogging App using Hooks
 import { useState, useRef, useEffect, useReducer } from "react";
 import { db } from "../firebaseinit";
-import { collection, doc, setDoc,addDoc } from "firebase/firestore"; 
+import { collection, doc, setDoc,addDoc, getDocs } from "firebase/firestore"; 
 
 
 
@@ -56,6 +56,32 @@ export default function Blog() {
             document.title = "No blogs!";
         }
     }, [blogs]);
+
+    // Fetching data on  rendering
+
+    useEffect(()=>{
+        async function fetchData(){
+            const snapShot = await getDocs(collection(db, "blogs"));
+            console.log(snapShot);
+            
+
+            let blogs = snapShot.docs.map((doc)=>{
+                     return {
+                        id:doc.id,
+    
+                        ...doc.data()
+                
+    
+            }});
+
+            console.log(blogs);
+            dispatch(blogs);
+    
+        }
+
+        fetchData();
+       
+    },[]);
 
     async function handleSubmit(e) {
         e.preventDefault();
