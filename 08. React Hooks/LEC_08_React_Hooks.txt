@@ -1,0 +1,15 @@
+Class-based components may make it difficult to reuse logic across components since the logic is tied to the component class and may not be easily extracted. This can lead to code duplication and more maintenance overhead. Hence, it is difficult to understand.
+
+Hooks can only be used in functional components. Access to React state and lifecycle methods, such as componenentDidMount(), componentDidUpdate(), etc., are provided by different Hooks.
+
+Hooks cannot be used inside class based components. Also, setting the state in the render() function causes the App to enter an infinite loop. Therefore, multiple errors occur. 
+
+useEffect acts as ComponentDidMount And ComponnentDidUpdate
+
+[] pass an empty array to make it ComponentDidMount And [someCondition] to make it componentDidUpdate  like
+[lastName]
+
+The useEffect() hook lets you synchronize a component with an external system such as a browser API or a server. You can execute the lifecycle methods that are available in class based components, using the useEffect() hook.
+
+The useReducer() hook can help us manage the state in a more structured and predictable way, which can reduce the complexity of our components and improve the overall organization of our code. Option A is not ideal because it can lead to duplicated state management logic across multiple components. Option C helps avoid unnecessary re-renders, but may not improve project structure
+

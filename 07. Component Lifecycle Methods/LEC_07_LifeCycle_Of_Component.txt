@@ -1,0 +1,46 @@
+React's lifecycle includes the phases in the following order -
+Mounting phase for component creation, Updating phase for state or prop changes, Unmounting phase for removing components from the DOM, and Error Handling phase for the rendering of lifecycle errors.
+
+Handling user events such as onClick or onChange is not an action that should be performed using a side effect.
+
+Setting the state or causing side effects in the above three functions leads to errors, infinite loops, and undefined behavior. Whereas setting the state or causing side effects in componentDidMount() leads to a single rerender of the component.
+
+After setting the state in the componentDidMount() method, the component rerenders, and the getDerivedStateFromProps() method is called first, and then, the render() method is called implicitly.
+
+As getDerivedStateFromProps() is a static method, it does not have access to the instance of the component class. The this keyword is undefined in the getDerivedStateFromProps() method so the setState() method cannot be used.
+
+We can use this.setState() under componentDidMount(), getDerivedStateFromProps() based on condition , we can not use this keyword here it is a static method 
+
+
+render function looping => if we use this.state inside render function it will call render function implicitly Which will cause render function call looping .
+
+A. Constructor has been invoked => First
+ComponentA.js:17 A. getDerivedStateFromProps has been invoked => Second
+ComponentA.js:26 A. This render has been invoked => Third 
+ComponentB.js:12  B. Constructor has been invoked => First
+ComponentB.js:16  B. getDerivedStateFromProps has been invoked => Second
+ComponentB.js:25 B. This render has been invoked => Third 
+ComponentB.js:21 B. componentDidMount has been invoked => Last
+ComponentA.js:22 A. componentDidMount has been invoked => Last
+
+
+As the component is rerendered every time you type, the componentDidUpdate() method gets called after each render. Hence, it is the best place to cause a side effect and send a request to save the text.
+
+Solution Description
+componentWillUnmount() is a recommended method to unsubscribe events or cancel previous requests. In this case, the previous request isn’t required to be sent as it may cause unnecessary API calls and increased network costs. Therefore, we are canceling the request.
+
+The Feed component will initially have an empty array inside the state. So it will render “0”. After five seconds, the state will be updated to an array of length 2. This will trigger the shouldComponentUpdate lifecycle method that will prevent the component from updating if the array length is not greater than or equal to 3. So the component will not re-render.
+
+The value returned by the getSnapshotBeforeUpdate() method is passed to the componentDidUpdate() method as a parameter. When the component updates, the value of snapShot and previous count remains the same i.e, one. The current value of the count becomes four.
+
+The loader is mounted as soon as the request is sent to the API. When the data is received, the loader is unmounted and removed from the DOM. So, it goes through the mounting and un-mounting phases only.
+The component goes through the updating phase when the data is received from API and set inside the state. So we can implement the effects inside lifecycle methods executed during this phase.
+
+Solution Description
+When shouldComponentUpdate returns false, the component will not be rerendered. Therefore the render and componentDidUpdate lifecycle methods are not executed
+
+Error Boundary cannot be used to handle errors from event handlers and itself. A fallback UI is not provided by default and can be implemented by using Error Boundary.
+
+
+
+
