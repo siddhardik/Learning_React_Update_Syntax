@@ -11,3 +11,13 @@ The react-router-dom library offers multiple routers to implement routing, and t
 The base address of the Twitter web app is www.twitter.com, and /explore is the route used by the Client Side Router to uniquely identify and load the explore page of the Twitter web app.
 
 Since we are not providing the router prop to RouterProvider, it will fail to route to the Home and About components on their specified routes.
+
+import {Link } from "react-router-dom";
+
+
+
+<Link to ="/about" >About</Link>
+
+Link is a tag It is wrapper around a tag 
+
+The Link element in React Router is a wrapper around the anchor element that prevents hard page reload. It allows programmatic navigation based on user actions like clicks.
