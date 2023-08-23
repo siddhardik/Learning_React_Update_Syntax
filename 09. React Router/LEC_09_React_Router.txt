@@ -1,0 +1,13 @@
+Single Page Applications don't allow Server Side Routing as it triggers a page refresh. SPAs load the complete app on mount, and when the user navigates to a new page, they don't necessarily need to request data from the server again.
+
+Single Page Applications can be built using Conditional Rendering, which does not reload the page when a new component is rendered.
+
+For Routing we have to use a third-party library 
+
+npm install react-router-dom
+
+The react-router-dom library offers multiple routers to implement routing, and the recommended way to implement routing in web projects is to use the createBrowserRouter.
+
+The base address of the Twitter web app is www.twitter.com, and /explore is the route used by the Client Side Router to uniquely identify and load the explore page of the Twitter web app.
+
+Since we are not providing the router prop to RouterProvider, it will fail to route to the Home and About components on their specified routes.
