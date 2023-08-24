@@ -14,22 +14,22 @@ import Navbar from "./components/Navbar";
 
 function App() {
   // const routes = createRoutesFromElements(
-  //   <>
-  //     <Route path="/" element={<Home />} />
+  //   <Route path ="/" element={<Navbar/>}>
+  //     <Route index  element={<Home />} />
   //     <Route path="/about" element={<About />} />
   //     <Route path="/items" element={<Items />} />
-  //   </>
+  //   <Route/>
   // )
 
   // const router = createBrowserRouter(routes);
 
   const router = createBrowserRouter([
     {
-      path:"/" ,element:<Navbar />, 
+      path:"/root" ,element:<Navbar />, 
       children:[
         {index:true, element : <Home/>},
-        {path : "/about", element : <About/>},
-        {path : "/items", element : <Items/>}
+        {path : "about", element : <About/>},
+        {path : "items", element : <Items/>}
 
         // path : "/" or index:true or path: ""
         

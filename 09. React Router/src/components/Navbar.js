@@ -1,17 +1,17 @@
-import { Link ,Outlet } from "react-router-dom";
+import { NavLink ,Link,Outlet } from "react-router-dom";
 function Navbar() {
   return (
     <>
       <div className="nav">
-        <Link to="/">
+        <NavLink style={({isActive})=>isActive?{color:"cyan"}:undefined} to="/root">
           <h4>HOME</h4>
-        </Link >
-        <Link to="/about" >
+        </NavLink >
+        <NavLink style={({isActive})=>isActive?{color:"cyan"}:undefined} to="/root/about" >
           <h4>ABOUT</h4>
-        </Link >
-        <Link to="/items" >
+        </NavLink >
+        <NavLink style={({isActive})=>isActive?{color:"cyan"}:undefined} to="/root/items" >
           <h4>ITEMS</h4>
-        </Link >
+        </NavLink >
       </div>
       <Outlet/>
     </>  

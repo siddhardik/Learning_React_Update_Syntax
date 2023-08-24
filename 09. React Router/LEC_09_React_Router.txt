@@ -21,3 +21,16 @@ import {Link } from "react-router-dom";
 Link is a tag It is wrapper around a tag 
 
 The Link element in React Router is a wrapper around the anchor element that prevents hard page reload. It allows programmatic navigation based on user actions like clicks.
+
+When we need to visibled our active  link of navbar we shouyld use NavLink 
+
+<NavLink style={({isActive})=>isActive?{color:"cyan"}:undefined} to="/">
+          <h4>HOME</h4>
+        </NavLink >
+
+/  then / about  == /about
+
+/root  then /about  == /root/about
+
+
+Relative paths don't require the same base as the top-level route and are appended, while absolute paths replace the current path with the specified path and are not appended to the top-level route.
