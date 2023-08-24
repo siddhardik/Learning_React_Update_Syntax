@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Items from "./pages/Items";
 import Navbar from "./components/Navbar";
+import ItemDetails from "./pages/ItemDetails";
 
 
 function App() {
@@ -29,7 +30,11 @@ function App() {
       children:[
         {index:true, element : <Home/>},
         {path : "about", element : <About/>},
-        {path : "items", element : <Items/>}
+        {path : "items", element : <Items/>},
+        {
+          path:"items/:id",
+          element:<ItemDetails/>
+        }
 
         // path : "/" or index:true or path: ""
         

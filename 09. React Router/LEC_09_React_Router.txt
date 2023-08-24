@@ -34,3 +34,5 @@ When we need to visibled our active  link of navbar we shouyld use NavLink
 
 
 Relative paths don't require the same base as the top-level route and are appended, while absolute paths replace the current path with the specified path and are not appended to the top-level route.
+
+Dynamic routing is used when the exact route is unknown. User profiles can be implemented using dynamic routes as each user has a unique ID. The personalized state routes also require dynamic routes to display each user's statistics. The auth and checkout routes do not require dynamic routes as they have fixed routes.

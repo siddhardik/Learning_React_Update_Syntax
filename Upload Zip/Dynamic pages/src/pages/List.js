@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { items } from "../data";
 
 export const List = () => {
@@ -7,7 +8,9 @@ export const List = () => {
       <div className="item-list">
         {items.map((i) => (
           <div className="item" key={i.id}>
-            <h3>{i.name}</h3>
+            <Link to={`${i.id}`}>
+              <h3>{i.name}</h3>
+            </Link>
             <img src={i.image} alt={i.name} />
           </div>
         ))}
