@@ -2,3 +2,6 @@ Context API does not lift the state up, it decouples it from the component tree 
 
 e quiz app will not require the context API as the user's progress can be tracked using local state within the component.
 The code snippet will throw an error because the useContext hook requires the context object to be passed as its first argument.
+
+
+We can get context value by hook and via consumer 
